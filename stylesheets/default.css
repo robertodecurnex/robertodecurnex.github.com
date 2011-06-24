@@ -21,11 +21,16 @@ header#main, footer#main {
 }
 header#main {
   margin-bottom: 10px;
-  font-size: 29px;
 }
-header#main span#by {
+header#main h1 {
+  font-size: 29px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+header#main h1 span#by {
   float: right;
   font-size: 14px;
+  font-weight: normal;
 }
 header#main a {
   color: rgba(255,255,255,0.9);
@@ -50,7 +55,24 @@ section#content {
 } 
 nav#main {
   width: 25%;
-  text-align: center;
+}
+nav#main h3 {
+  background-color: rgba(0,0,0,0.6);
+  color: rgba(255,255,255,0.8);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 3px 0;
+  font-weight: normal;
+}
+nav#main p {
+    margin: 5px 0 5px 20px;
+}
+nav#main a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.8)
+}
+nav#main a:hover {
+  text-decoration: underline;
 }
 nav#main img#me {
   border-radius: 8px;
@@ -66,9 +88,13 @@ article.post header {
   text-align: right;
   padding: 10px 10px 10px 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 22px;
   border-radius: 7px;
   margin-bottom: 5px;
+}
+article.post header h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 3px 0;
 }
 article.post footer {
   margin-top: 5px;
