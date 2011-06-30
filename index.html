@@ -63,19 +63,53 @@ layout: default
       </footer>
     </article>
   </section>
-  <nav id="main">
-    <h3>Projects:</h3>
-    <p>
-      <a href="/rack-jsonp-middleware" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
-    </p>
-    <p>
-      <a href="/J50Npi" title="Basic JSONP helper (pure JS)">J50N&pi;</a>
-    </p>
-    <p>
-      <a href="/kCode" title="Simple Konami Code implementation (Pure JS)">kCode</a>
-    </p>
-  </nav>
-  
+  <section id="side-panel">
+    <nav id="main">
+      <h3>Projects:</h3>
+      <p>
+        <a href="/rack-jsonp-middleware" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
+      </p>
+      <p>
+        <a href="/J50Npi" title="Basic JSONP helper (pure JS)">J50N&pi;</a>
+      </p>
+      <p>
+        <a href="/kCode" title="Simple Konami Code implementation (Pure JS)">kCode</a>
+      </p>
+    </nav>
+    <section id="twitter">
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 4,
+          interval: 6000,
+          width: 'auto',
+          height: 300,
+          theme: {
+            shell: {
+              background: 'rgba(255, 255, 255, 0.6)',
+              color: 'rgba(0, 0, 0, 0.8)'
+            },
+            tweets: {
+              background: 'rgba(0, 0, 0, 0.6)',
+              color: 'rgba(255, 255, 255, 0.8)',
+              links: 'rgba(255, 131, 0, 0.8)'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            hashtags: false,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('robertodecurnex').start();
+      </script>
+    </section>
+  </section>
   <div class="clearfix">
   </div>
 

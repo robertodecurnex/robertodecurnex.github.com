@@ -33,7 +33,7 @@ header#main h1 span#by {
   font-weight: normal;
 }
 header#main a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 131, 0, 0.8);
   text-decoration: none;
 }
 header#main a:hover {
@@ -45,16 +45,26 @@ footer#main {
   font-size: 10px;
 }
 section#content, nav#main {
-  float: left;
   background-color: rgba(255,255,255,0.6);
-  padding: 15px 2%;
 }
 section#content {
+  float: left;
   width: 60%;
   margin-right: 7%;
+  padding: 15px 2%;
 } 
 nav#main {
-  width: 25%;
+ margin-bottom: 10px;
+ padding: 1px 2%;
+}
+section#side-panel {
+  width: 29%;
+}
+section#twitter h4 {
+  font-size: 15px !important;
+}
+section#twitter h3 {
+  font-size: 12px !important;
 }
 nav#main h3 {
   background-color: rgba(0,0,0,0.6);
@@ -77,6 +87,9 @@ nav#main a:hover {
 nav#main img#me {
   border-radius: 8px;
   border: 2px solid rgba(0,0,0,0.6);
+}
+section#side-panel {
+  float: left;
 }
 article.post {
   margin: 0 0 10px;
