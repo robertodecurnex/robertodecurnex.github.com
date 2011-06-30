@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   background-image: url('/images/background.png');
   background-position: center;
   background-attachment: fixed;
@@ -15,7 +15,7 @@ header#main, footer#main, section#content, nav#main {
   border-radius: 8px;
 }
 header#main, footer#main {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
   padding: 8px;
   color: rgba(255,255,255,0.9);
 }
@@ -33,7 +33,7 @@ header#main h1 span#by {
   font-weight: normal;
 }
 header#main a {
-  color: rgba(255, 131, 0, 0.8);
+  color: rgba(255, 131, 0, 0.9);
   text-decoration: none;
 }
 header#main a:hover {
@@ -50,12 +50,24 @@ section#content, nav#main {
 section#content {
   float: left;
   width: 60%;
-  margin-right: 7%;
+  margin-right: 5%;
   padding: 15px 2%;
 } 
 nav#main {
  margin-bottom: 10px;
  padding: 1px 2%;
+}
+nav#main table#about-me {
+  margin: 0 auto;
+}
+nav#main table#about-me td.left {
+  text-align: right;
+}
+nav#main table#about-me td.center {
+  text-align: center;
+}
+nav#main table#about-me td.right {
+  text-align: left;
 }
 section#side-panel {
   width: 29%;
@@ -67,26 +79,29 @@ section#twitter h3 {
   font-size: 12px !important;
 }
 nav#main h3 {
-  background-color: rgba(0,0,0,0.6);
-  color: rgba(255,255,255,0.8);
+  background-color: rgba(0,0,0,0.7);
+  color: rgba(255,255,255,0.9);
   border-radius: 7px;
   padding: 5px;
   margin: 3px 0;
   font-weight: normal;
+  text-align: right;
+  width: 105%;
 }
 nav#main p {
     margin: 5px 0 5px 20px;
+    color: rgba(0, 0, 0, 0.9);
 }
 nav#main a {
     text-decoration: none;
-    color: rgba(0,0,0,0.8)
+    color: rgba(0,0,0,0.9)
 }
 nav#main a:hover {
   text-decoration: underline;
 }
 nav#main img#me {
   border-radius: 8px;
-  border: 2px solid rgba(0,0,0,0.6);
+  border: 2px solid rgba(0,0,0,0.7);
 }
 section#side-panel {
   float: left;
@@ -96,7 +111,7 @@ article.post {
   color: rgba(0, 0, 0, 0.9);
 }
 article.post header {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 105%;
   text-align: right;
   padding: 10px 10px 10px 0;
@@ -115,7 +130,13 @@ article.post footer {
   color: rgba(0, 0, 0, 0.9);
   padding: 4px 7px;
   text-align: right;
-  border-top: 1px dotted rgba(0, 0, 0, 0.9);
+  border-top: 1px dotted rgba(0, 0, 0, 0.7);
+}
+span.like {
+  color: rgba(0,140,0,0.9);
+}
+span.dislike {
+  color: rgba(140,0,0,0.9);
 }
 .clearfix {
   clear: both;
