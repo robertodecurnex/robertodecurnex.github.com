@@ -1,0 +1,43 @@
+pre code.ruby span.k {
+  color: rgba(0, 0, 200, 0.9);
+  font-weight: bold;
+}
+pre code.ruby span.nn,
+pre code.ruby span.nc,
+pre code.ruby span.nf,
+pre code.ruby span.no {
+  color: rgba(0, 80, 0, 0.9);
+  font-weight: bold;
+}
+pre code.ruby span.s1,
+pre code.ruby span.s2 {
+  color: rgba(140, 0, 0, 0.9);
+}  
+pre code.ruby span.nb {
+  color: rgba(140, 0, 0, 0.9);
+  font-weight: bold;
+}
+pre code.ruby span.ss {
+  color: rgba(0, 106, 167, 0.9);
+}
+pre code.ruby span.vi,
+pre code.ruby span.vc {
+  color: rgba(0, 106, 167, 0.9);
+  font-weight: bold;
+}
+pre code.ruby span.mi {
+  color: rgba(0, 0, 0, 0.8);
+}
+pre code.ruby span.o {
+  font-weight: bold;
+}
+pre code.ruby span.kp {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+pre code.ruby span.n {
+  color: rgba(0, 0, 0, 0.8);
+}
+pre code.ruby span.c1 {
+  color: rgba(142, 95, 0, 0.9);
+}
