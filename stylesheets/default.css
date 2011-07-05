@@ -27,12 +27,16 @@ header#main h1 {
   margin: 10px 0;
   font-weight: normal;
 }
+header#main h1 a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.9);
+}
 header#main h1 span#by {
   float: right;
   font-size: 14px;
   font-weight: normal;
 }
-header#main a {
+header#main h1 span#by a {
   color: rgba(255, 131, 0, 0.9);
   text-decoration: none;
 }
@@ -123,6 +127,10 @@ article.post header h2 {
   font-size: 22px;
   font-weight: normal;
   margin: 3px 0;
+}
+article.post header h2 a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
 }
 article.post footer {
   margin-top: 5px;

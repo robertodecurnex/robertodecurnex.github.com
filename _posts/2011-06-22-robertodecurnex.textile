@@ -1,4 +1,0 @@
----
-layout: post
----
-It's me!

@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html>
-  <head>
-    <title>robertodecurnex</title>
-  </head>
-  <body>
-    robertodecurnex
-    {{ content }}
-  </body>
-</html>
+<article class="post">
+
+  <header>
+    <h2><a href='{{page.url}}'>{{page.title}}</a></h2>
+  </header>
+
+  {{ content }}
+  
+  <footer>
+    Tags =&gt; {{page.tags}} 
+  </footer>
+</article>
+

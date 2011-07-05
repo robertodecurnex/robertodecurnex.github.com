@@ -7,6 +7,99 @@
     <link type="text/css" rel="stylesheet" href="/stylesheets/pygment.css">
   </head>
   <body>
-    {{ content }}
+    <div id="wrapper">
+
+      <header id="main">
+        <h1><a href='/'>thinking out loud [...]</a><span id="by"><small>by</small> <a href="http://twitter.com/robertodecurnex" title="Follow me on Twitter!">@robertodecurnex</a><span></h1>
+      </header>
+      
+      <section id="content">
+        {{ content }}
+      </section>
+    
+      <section id="side-panel">
+    
+        <nav id="main">
+          <h3>About Me</h3>
+          <table id="about-me">
+            <tr>
+              <td class='left'><span class='like'>&#10003;</span> Ruby</td>
+              <td class='center'><strong>&brvbar;</strong></td>
+              <td class='right'><strike>Java</strike> <span class='dislike'>&times;</span></td>
+            </tr>
+            <tr>
+              <td class='left'><span class='dislike'>&times;</span> <strike>DC</strike></td>
+              <td class='center'><strong>&brvbar;</strong></td>
+              <td class='right'>Marvel <span class='like'>&#10003;</span></td>
+            </tr>
+            <tr>
+              <td class='left'><span class='like'>&#10003;</span> RPG</td>
+              <td class='center'><strong>&brvbar;</strong></td>
+              <td class='right'><strike>FPS</strike> <span class='dislike'>&times;</span></td>
+            </tr>
+            <tr>
+              <td class='left'><span class='like'>&#10003;</span> Batman</td>
+              <td class='center'><strong>&brvbar;</strong></td>
+              <td class='right'><strike>Superman</strike> <span class='dislike'>&times;</span></td>
+            </tr>
+            <tr>
+              <td class='left'><span class='dislike'>&times;</span> <strike>SVN</strike></td>
+              <td class='center'><strong>&brvbar;</strong></td>
+              <td class='right'>GIT <span class='like'>&#10003;</span></td> 
+          </table>
+
+          <h3>Projects</h3>
+          <p>
+            <a href="/rack-jsonp-middleware" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
+          </p>
+          <p>
+            <a href="/J50Npi" title="Basic JSONP helper (pure JS)">J50N&pi;</a>
+          </p>
+          <p>
+            <a href="/kCode" title="Simple Konami Code implementation (Pure JS)">kCode</a>
+          </p>
+        </nav>
+      
+        <section id="twitter">
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+            new TWTR.Widget({
+              version: 2,
+              type: 'profile',
+              rpp: 4,
+              interval: 6000,
+              width: 'auto',
+              height: 300,
+              theme: {
+                shell: {
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  color: 'rgba(0, 0, 0, 0.9)'
+                },
+                tweets: {
+                  background: 'rgba(0, 0, 0, 0.7)',
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  links: 'rgba(255, 131, 0, 0.9)'
+                }
+              },
+              features: {
+                scrollbar: false,
+                loop: false,
+                live: false,
+                hashtags: true,
+                timestamp: true,
+                avatars: false,
+                behavior: 'all'
+              }
+            }).render().setUser('robertodecurnex').start();
+          </script>
+        </section>
+      </section>
+
+      <div class="clearfix"></div>
+
+      <footer id="main">
+        &copy;2011 - Roberto Decurnex
+      </footer>
+    </div>
   </body>
 </html>
