@@ -11,6 +11,13 @@ div#wrapper {
   margin: 0 auto;
   width: 50%;
 }
+div#rss-image-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+img#rss-image {
+  width: 100px;
+}
 header#main, footer#main, section#content, nav#main {
   border-radius: 8px;
 }
