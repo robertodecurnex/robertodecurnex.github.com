@@ -176,3 +176,20 @@ pre {
   width: 102%;
   padding: 0 0 0 20px;
 }
+#disqus_thread {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  border-radius: 7px;
+  color: rgba(255,255,255,0.9);
+}
+#disqus_thread a {
+ color: rgba(255, 131, 0, 0.9);
+ text-decoration: none;
+}
+#disqus_thread a:hover {
+  text-decoration: underline;
+}
+a.dsq-brlink {
+  color: rgba(180, 0, 0, 0.9);
+  text-decoration: none;
+}
