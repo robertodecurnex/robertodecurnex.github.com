@@ -2,6 +2,7 @@
 title: Wrong [by Depeche Mode]
 layout: post
 tags: me&nbsp;-&nbsp;misc&nbsp;-&nbsp;welcome
+identifier: wrong_by_depeche_mode
 ---
 
 I was born with the wrong sign

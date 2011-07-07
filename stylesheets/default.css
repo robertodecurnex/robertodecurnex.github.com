@@ -40,9 +40,6 @@ header#main h1 span#by a {
   color: rgba(255, 131, 0, 0.9);
   text-decoration: none;
 }
-header#main a:hover {
-  text-decoration: underline;
-}
 footer#main {
   margin-top: 10px;
   text-align: right;
@@ -114,6 +111,20 @@ article.post {
   margin: 0 0 10px;
   color: rgba(0, 0, 0, 0.9);
 }
+article.post blockquote {
+  margin-right: 0;
+}
+article.post a {
+  color: rgba(180, 0, 0, 0.9);
+  text-decoration: none;
+}
+article.post h2 {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6px;
+  border-radius: 7px;
+  font-size: 17px;
+  margin: 0 -6px;
+}
 article.post header {
   background-color: rgba(0, 0, 0, 0.7);
   width: 105%;
@@ -127,6 +138,9 @@ article.post header h2 {
   font-size: 22px;
   font-weight: normal;
   margin: 3px 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
 }
 article.post header h2 a {
   text-decoration: none;
