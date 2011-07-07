@@ -15,10 +15,16 @@ h2. "@elgalu":http://twitter.com/elgalu
 A flexible developer with expertise in a wide range of technologies. He is a strong Rails + JS developer, currently focused on Automation. Although he performs very well with CSS he is not the happier man ever when working with it. He also owns this huge collection of tip notes, it's like a walking human-like StackOverflow.
 </blockquote>
 
-h2. "@jmoren":http://twitter.com/jmoren
+h2. "@jmoren_06":http://twitter.com/jmoren_06
 
 <blockquote>
 The practical guy. He is the only one who is really creating stuff that works on this world full of mortal souls. He is mainly focused on the creation of business dedicated applications with rich user interfaces. He is also the team philosopher and a big open source enthusiastic. 
+</blockquote>
+
+h2. <span style="color: rgba(180, 0, 0, 0.9);">???</span>
+
+<blockquote>
+There is this other guy, a great friend of mine, but, until now, he is not ready to be committed to the project. He still have a whole week to think about it (until the end of the registration period). 
 </blockquote>
 
 So it's time to start working! Base on the contest rules there are a lot of things that we can start with. This week main objectives will include long hours of discussions about the project scope and the creation of an initial list of potential tools to be used. The latter one is really important since we all need to have a medium+ level of understanding of them in order to prevent unnecessary time looses during the contest period.
