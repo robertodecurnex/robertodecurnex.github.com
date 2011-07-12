@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<article class="post">
+<div class="article post">
 
-  <header>
+  <div class="header">
     <h2><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h2>
-  </header>
+  </div>
 
   {{ site.posts.first.content }}
 
-  <footer>
+  <div class="footer">
     Tags =&gt; {{site.posts.first.tags}} 
-  </footer>
+  </div>
 
-</article>
+</div>
 <!-- Disqus script [With Style Problems] -->
     <div id="disqus_thread"></div>
     <script type="text/javascript">

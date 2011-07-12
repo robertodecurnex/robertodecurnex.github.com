@@ -45,17 +45,17 @@
   <body>
     <div id="wrapper">
 
-      <header id="main">
+      <div class="header" id="main">
         <h1><a href='/'>thinking out loud [...]</a><span id="by"><small>by</small> <a href="http://twitter.com/robertodecurnex" title="Follow me on Twitter!">@robertodecurnex</a><span></h1>
-      </header>
+      </div>
       
-      <section id="content">
+      <div class="section" id="content">
         {{ content }}
-      </section>
+      </div>
     
-      <section id="side-panel">
+      <div class="section" id="side-panel">
     
-        <nav id="main">
+        <div class="nav" id="main">
           <h3>About Me</h3>
           <table id="about-me">
             <tr>
@@ -98,9 +98,9 @@
           <div id="rss-image-wrapper">
             <a href="/atom.xml"><img id="rss-image" src="/images/rss.png"></img></a>
           </div>
-        </nav>
+        </div>
       
-        <section id="twitter">
+        <div class="section" id="twitter">
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script>
             new TWTR.Widget({
@@ -132,14 +132,14 @@
               }
             }).render().setUser('robertodecurnex').start();
           </script>
-        </section>
-      </section>
+        </div>
+      </div>
 
       <div class="clearfix"></div>
 
-      <footer id="main">
+      <div class="footer" id="main">
         &copy;2011 - Roberto Decurnex
-      </footer>
+      </div>
     </div>
     <div id="k-code">
       <audio src="/audios/all_your_base_are_belong_to_us.wav" id="k-code-audio">

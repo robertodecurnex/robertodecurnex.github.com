@@ -18,75 +18,75 @@ div#rss-image-wrapper {
 img#rss-image {
   width: 100px;
 }
-header#main, footer#main, section#content, nav#main {
+div.header#main, div.footer#main, div.section#content,div.nav#main {
   border-radius: 8px;
 }
-header#main, footer#main {
+div.header#main, div.footer#main {
   background-color: rgba(0,0,0,0.7);
   padding: 8px;
   color: rgba(255,255,255,0.9);
 }
-header#main {
+div.header#main {
   margin-bottom: 10px;
 }
-header#main h1 {
+div.header#main h1 {
   font-size: 29px;
   margin: 10px 0;
   font-weight: normal;
 }
-header#main h1 a {
+div.header#main h1 a {
   text-decoration: none;
   color: rgba(255,255,255,0.9);
 }
-header#main h1 span#by {
+div.header#main h1 span#by {
   float: right;
   font-size: 14px;
   font-weight: normal;
 }
-header#main h1 span#by a {
+div.header#main h1 span#by a {
   color: rgba(255, 131, 0, 0.9);
   text-decoration: none;
 }
-footer#main {
+div.footer#main {
   margin-top: 10px;
   text-align: right;
   font-size: 10px;
 }
-section#content, nav#main {
+div.section#content, div.nav#main {
   background-color: rgba(255,255,255,0.6);
 }
-section#content {
+div.section#content {
   float: left;
   width: 60%;
   margin-right: 5%;
   padding: 15px 2%;
 } 
-nav#main {
+div.nav#main {
  margin-bottom: 10px;
  padding: 1px 2%;
 }
-nav#main table#about-me {
+div.nav#main table#about-me {
   margin: 0 auto;
 }
-nav#main table#about-me td.left {
+div.nav#main table#about-me td.left {
   text-align: right;
 }
-nav#main table#about-me td.center {
+div.nav#main table#about-me td.center {
   text-align: center;
 }
-nav#main table#about-me td.right {
+div.nav#main table#about-me td.right {
   text-align: left;
 }
-section#side-panel {
+div.section#side-panel {
   width: 29%;
 }
-section#twitter h4 {
+div.section#twitter h4 {
   font-size: 15px !important;
 }
-section#twitter h3 {
+div.section#twitter h3 {
   font-size: 12px !important;
 }
-nav#main h3 {
+div.nav#main h3 {
   background-color: rgba(0,0,0,0.7);
   color: rgba(255,255,255,0.9);
   border-radius: 7px;
@@ -96,43 +96,43 @@ nav#main h3 {
   text-align: right;
   width: 105%;
 }
-nav#main p {
+div.nav#main p {
     margin: 5px 0 5px 20px;
     color: rgba(0, 0, 0, 0.9);
 }
-nav#main a {
+div.nav#main a {
     text-decoration: none;
     color: rgba(0,0,0,0.9)
 }
-nav#main a:hover {
+div.nav#main a:hover {
   text-decoration: underline;
 }
-nav#main img#me {
+div.nav#main img#me {
   border-radius: 8px;
   border: 2px solid rgba(0,0,0,0.7);
 }
-section#side-panel {
+div.section#side-panel {
   float: left;
 }
-article.post {
+div.article.post {
   margin: 0 0 10px;
   color: rgba(0, 0, 0, 0.9);
 }
-article.post blockquote {
+div.article.post blockquote {
   margin-right: 0;
 }
-article.post a {
+div.article.post a {
   color: rgba(180, 0, 0, 0.9);
   text-decoration: none;
 }
-article.post h2 {
+div.article.post h2 {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 6px;
   border-radius: 7px;
   font-size: 17px;
   margin: 0 -6px;
 }
-article.post header {
+div.article.post div.header {
   background-color: rgba(0, 0, 0, 0.7);
   width: 105%;
   text-align: right;
@@ -141,7 +141,7 @@ article.post header {
   border-radius: 7px;
   margin-bottom: 5px;
 }
-article.post header h2 {
+div.article.post div.header h2 {
   font-size: 22px;
   font-weight: normal;
   margin: 3px 0;
@@ -149,11 +149,11 @@ article.post header h2 {
   padding: 0;
   border-radius: 0;
 }
-article.post header h2 a {
+div.article.post div.header h2 a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
 }
-article.post footer {
+div.article.post div.footer {
   margin-top: 5px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.9);
