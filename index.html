@@ -11,7 +11,16 @@ layout: default
   {{ site.posts.first.content }}
 
   <div class="footer">
-    Tags =&gt; {{site.posts.first.tags}} 
+    <div class="author">
+      By Roberto Decunrex
+    </div>
+    <div class="date">
+      {{site.posts.first.date | date: "%d %B %Y"}}
+    </div>
+    <div class="tags">
+      Tags =&gt; {{site.posts.first.tags}} 
+    </div>
+    <div class="clearfix"></div>
   </div>
 
 </div>
