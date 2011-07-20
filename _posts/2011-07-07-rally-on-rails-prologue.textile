@@ -5,17 +5,17 @@ tags: rally&nbsp;on&nbsp;rails
 identifier: rally_on_rails_day_1
 ---
 
-Finally the very first "Rally on Rails":http://rallyonrails.com/ contest has opened its registration. As some of you may know this is the Latin American version of the "Rails Rumble":http://railsrumble.com/ and, following the same concept, the registered teams will be trying to write a productive "Rack":http://rack.rubyforge.org/ base web application, from scratch, in just 48 hours.
+Finally the very first "(tblank)Rally on Rails":http://rallyonrails.com/ contest has opened its registration. As some of you may know this is the Latin American version of the "(tblank)Rails Rumble":http://railsrumble.com/ and, following the same concept, the registered teams will be trying to write a productive "(tblank)Rack":http://rack.rubyforge.org/ base web application, from scratch, in just 48 hours.
 
 There was no more time to loose, I had to gather the team and start working on the main concept of the application right away. Since I'm almost a solo developer right now I had to pick some of my old partners (now split all around Argentina). 
 
-h2. "@elgalu":http://twitter.com/elgalu
+h2. "(tblank)@elgalu":http://twitter.com/elgalu
 
 <blockquote> 
 A flexible developer with expertise in a wide range of technologies. He is a strong Rails + JS developer, currently focused on Automation. Although he performs very well with CSS he is not the happier man ever when working with it. He also owns this huge collection of tip notes, it's like a walking human-like StackOverflow.
 </blockquote>
 
-h2. "@jmoren_06":http://twitter.com/jmoren_06
+h2. "(tblank)@jmoren_06":http://twitter.com/jmoren_06
 
 <blockquote>
 The practical guy. He is the only one who is really creating stuff that works on this world full of mortal souls. He is mainly focused on the creation of business dedicated applications with rich user interfaces. He is also the team philosopher and a big open source enthusiastic. 

@@ -30,7 +30,12 @@
           $(".header").delay(audioDelay + 6000).hide("explode",{ pieces: 20 }, 1000);
         });
       });
-    </script> 
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        $("a.tblank").attr("target","_blank"); 
+      })
+    </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-6908348-2']);
@@ -84,25 +89,39 @@
               <td class='right'>GIT <span class='like'>&#10003;</span></td> 
           </table>
 
-          <h3>Projects</h3>
+          <h3>Profile</h3>
           <p>
-            <a href="/rack-jsonp-middleware" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
+            <a href="/roberto_decurnex.pdf" target="_blank" title="Résumé">r&eacute;sum&eacute;</a>
           </p>
           <p>
-            <a href="/J50Npi" title="Basic JSONP helper (pure JS)">J50N&pi;</a>
+            <a href="http://github.com/robertodecurnex" target="_blank" title="Github">github</a>
           </p>
           <p>
-            <a href="/kCode" title="Simple Konami Code implementation (Pure JS)">kCode</a>
+            <a href="http://rubygems.org/profiles/47719" target="_blank" title="RubyGems">rubygems</a>
           </p>
           <p>
-            <a href="/caesar" title="Simple Caesar Cipher ruby implementation">caesar</a>
-          </p>
-          <p>
-            <a href="/vigenere" title="Simple Vigenère Cipher ruby implementation">vigenere</a>
+            <a href="http://stackoverflow.com/users/550167/robertodecurnex" target="_blank" title="StackOverflow">stackoverflow</a>
           </p>
 
+          <h3>Projects</h3>
+          <p>
+            <a href="/rack-jsonp-middleware" target="_blank" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
+          </p>
+          <p>
+            <a href="/J50Npi" target="_blank" title="Basic JSONP helper (pure JS)">J50N&pi;</a>
+          </p>
+          <p>
+            <a href="/kCode" target="_blank" title="Simple Konami Code implementation (Pure JS)">kCode</a>
+          </p>
+          <p>
+            <a href="/caesar" target="_blank" title="Simple Caesar Cipher ruby implementation">caesar</a>
+          </p>
+          <p>
+            <a href="/vigenere" target="_blank" title="Simple Vigenère Cipher ruby implementation">vigenere</a>
+          </p>
+ 
           <div id="rss-image-wrapper">
-            <a href="/atom.xml"><img id="rss-image" src="/images/rss.png"></img></a>
+            <a href="/atom.xml" target="_blank" ><img id="rss-image" src="/images/rss.png"></img></a>
           </div>
           <div id="emailme-image-wrapper">
               <a href="mailto:decurnex.roberto@gmail.com"><img id="emailme-image" src="/images/emailme.png"></img></a>
