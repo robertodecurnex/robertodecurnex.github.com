@@ -2,6 +2,8 @@
 title: Rally on Rails - Prologue
 layout: post
 tags: rally&nbsp;on&nbsp;rails
+keywords: rally on rails, rallyonrails, rubyoverflow, ruby overflow 
+meta_desc: The Rally on Rails contest is about to begin and the RubyOverflow team is gathering togheder.
 identifier: rally_on_rails_day_1
 ---
 
