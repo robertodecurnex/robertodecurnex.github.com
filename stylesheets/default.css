@@ -33,7 +33,7 @@ div.header#main, div.footer#main {
 div.header#main {
   margin-bottom: 10px;
 }
-div.header#main h1 {
+iv.header#main h1 {
   font-size: 29px;
   margin: 10px 0;
   font-weight: normal;
@@ -146,23 +146,25 @@ div.article.post a {
 }
 div.article.post h2 {
   background-color: rgba(255, 255, 255, 0.6);
+  color: rgba(180, 0, 0, 0.9);
   padding: 6px;
   border-radius: 7px;
   font-size: 17px;
-  margin: 0 -6px;
+  margin: 0 -6px 0 -39px;
 }
 div.article.post div.header {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 105%;
-  text-align: right;
+  width: 116%;
   padding: 10px 10px 10px 0;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   margin-bottom: 5px;
+  margin-left: -9%;
 }
 div.article.post div.header h2 {
   font-size: 22px;
   font-weight: normal;
+  text-align: center;
   margin: 3px 0;
   background: none;
   padding: 0;
@@ -180,6 +182,17 @@ div.article.post div.footer {
   text-align: right;
   border-top: 1px dotted rgba(0, 0, 0, 0.7);
 }
+div.article.post code {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+div.article.post code.ruby,
+div.article.post code.html {
+  background-color: transparent;
+}
+div.article.post img {
+  max-width: 108%;
+  border-radius: 12px;
+}
 span.like {
   color: rgba(0,140,0,0.9);
 }
@@ -190,10 +203,11 @@ span.dislike {
   clear: both;
 }
 pre {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
   border-radius: 7px;
   width: 102%;
-  padding: 0 0 0 20px;
+  padding: 6px 0 6px 20px;
 }
 #disqus_thread {
   background-color: rgba(0, 0, 0, 0.6);

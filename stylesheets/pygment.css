@@ -1,24 +1,28 @@
-pre code.ruby span.k {
-  color: rgba(0, 0, 200, 0.9);
+pre code.ruby span.k,
+pre code.ruby span.kp {
+  color: rgba(226, 148, 0, 0.9);
   font-weight: bold;
 }
 pre code.ruby span.nn,
 pre code.ruby span.nc,
 pre code.ruby span.nf,
 pre code.ruby span.no {
-  color: rgba(0, 80, 0, 0.9);
+  color: rgba(0, 160, 0, 0.9);
   font-weight: bold;
 }
 pre code.ruby span.s1,
 pre code.ruby span.s2 {
-  color: rgba(140, 0, 0, 0.9);
-}  
+  color: rgba(255, 0, 100, 0.9);
+} 
+pre code.ruby span.si {
+   color: rgba(0, 106, 167, 0.9);
+}
 pre code.ruby span.nb {
   color: rgba(140, 0, 0, 0.9);
   font-weight: bold;
 }
 pre code.ruby span.ss {
-  color: rgba(0, 106, 167, 0.9);
+  color: rgba(0, 195, 255, 0.9);
 }
 pre code.ruby span.vi,
 pre code.ruby span.vc {
@@ -26,18 +30,28 @@ pre code.ruby span.vc {
   font-weight: bold;
 }
 pre code.ruby span.mi {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 pre code.ruby span.o {
   font-weight: bold;
 }
-pre code.ruby span.kp {
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: bold;
-}
 pre code.ruby span.n {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 pre code.ruby span.c1 {
-  color: rgba(142, 95, 0, 0.9);
+  color: rgba(0, 145, 255, 0.9);
+}
+
+
+pre code.html span.nt {
+  color: rgba(214, 69, 218, 0.9);
+}
+pre code.html span.na {
+  color: rgba(226, 148, 0, 0.9);
+}
+pre code.html span.cp {
+  color: rgba(255, 255, 255, 0.5);
+}
+pre code.html span.s {
+  color: rgba(0, 145, 255, 0.5);
 }

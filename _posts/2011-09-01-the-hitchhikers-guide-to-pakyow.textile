@@ -1,0 +1,665 @@
+---
+title: The Hitchhiker's Guide to Pakyaw
+layout: post
+keywords: pakyow, pakyow tutorial, ruby pakyow, pakyow framework, pakyow ruby web framework
+meta_desc:
+tags: pakyow
+identifier: the_hitchhikers_guide_to_pakyaw
+---
+
+"(tblank)Pakyow":http://@ attributeakyow.com is a brand new "(tblank)rack":http://rack.rubyforge.org/ based web framework for Ruby.
+
+The objective of this post is to build toghether our first Pakyow application, *&quot;The Trend Factory&quot;*. We will move forward step by step inspecting some of the main features of the framework. 
+
+You should be able to follow this guide progress by checking The Trend Factory's github repo "(tblank)here":https://github.com/robertodecurnex/the-trend-factory and going over its "commits":https://github.com/robertodecurnex/the-trend-factory/commits/master.
+
+If you want/need more detailed information about how Pakyow works you can check the "(tblank)Pakyow's official manual":http://pakyow.com/manual.
+
+h2. 01| Install Pakyow
+
+notextile. <pre class="coderay">
+gem install pakyow
+</pre>
+
+h2. 02| Create the Application
+
+notextile. <pre class="coderay">
+pakyow new the-trend-factory
+</pre>
+
+That will create the following application skeleton under the @./the-trend-factory@ directory:
+
+notextile. <pre class="coderay">
+app/
+  lib/
+    application_controller.rb
+  views/
+    main.html
+    @ attributeakyow.html 
+config/
+  application.rb
+logs/
+  requests.log
+public/
+  favicon.ico
+config.ru
+rakefile
+README
+</pre>
+ 
+"(tblank)[commit]":https://github.com/robertodecurnex/the-trend-factory/commit/d3028684b577d03eba07301968bc44a3ca0da4e1
+
+h2. 03| Start the Development Server
+
+notextile. <pre class="coderay">
+cd the-trend-factory
+@ attributeakyow server
+</pre>
+
+That will start your development server listening on @localhst:3000@.
+
+Now open your browser and go to @http://localhost:3000@. You should get an Apache like  @Welcome to Pakyow!@ message.
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/01_welcome_to_pakyow.png!
+
+h2. 04| Create the Application Index
+
+What you have just seen is the default content of the application index view.
+ 
+Views are constructed starting form a *Root View* html file. 
+
+*Root Views* define the main structure by creating *Containers*. 
+
+*Containers* are html elements with a custom @id@ value. 
+
+The *Containers* will then be filled with its related *Content Views*. 
+
+*Content Views* are html files named as its target containers @id@ value. They can also define containers to be filled with the content of other *Content Views*.
+
+@pakyow.html@ is the default application *Root View*
+
+@./app/views/pakyow.html@
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pakyow</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="main"></div>
+    </div>
+  </body>
+</html>
+{% endhighlight %}
+
+This view defines a @wrapper@ and a @main@ container.
+
+The framework will then try to fill them looking for their namesake *Content Views* under the @./app/views/@ and @./app/views/index/@ directories. It will actaully follow some sort of directory hierarchy, starting from the deeper directory and using the first matching file that it finds in there or in any of its parent directories.
+
+Since @./app/views/main.html@ exists but @./app/views/index/wrapper.html@ and @./app/views/wrapper.html@ don't only the @main@ container will be filled with:
+
+@./app/views/main.html@  
+
+{% highlight html %}
+<h1>Welcome to Pakyow!</h1>
+{% endhighlight %}
+
+The resulting html:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pakyow</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="main">
+        <h1>Welcome to Pakyow!</h1>
+      </div>
+    </div>
+  </body>
+</html>
+{% endhighlight %}
+
+Now that we have a sence of how this works let's edit the title to @The Trend Factory@ and create its homepage message.
+
+@./app/views/pakyow.html@
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Trend Factory</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="main"></div>
+    </div>
+  </body>
+</html>
+{% endhighlight %}
+
+@./app/views/main.html@  
+
+{% highlight html %}
+<h1>The Trend Factory</h1>
+<h3>A Pakyow Sample Application</h3>
+{% endhighlight %}
+
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/b7dcea94010e62ce607f576fda1a48788335d71c
+
+Refresh the browser to see the chenges taking effect.
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/02_the_trend_factory.png!
+
+h2. 05| Creating a new Path/View
+
+In order to let users post they trend messages let's build a message creation view for them.
+
+To enable the @message/new@ application path we need to create its *Content Views* directory: @./app/views/messages/new@
+
+We need a custom @main.html@ with a *Container* that will hold the message cration form. 
+
+@./app/views/messages/new/main.html@
+
+{% highlight html %}
+<h1>Post a new Message</h1>
+
+<div id="form"></div>
+{% endhighlight %}
+
+Now we need a @form.html@ with the message form. We can create it either under the @./app/views/messages/new/@ or the @./app/views/messages/@ directory. Since is a message representation and is not really bounded to the message creation I will pick @./app/views/messages/@
+
+@./app/views/messages/form.html@
+
+{% highlight html %}
+<form action="/messages" method="post">
+  <label>As:</label>
+  <br />
+  <input type="text" name="message[author]">
+  <br /><br />
+  <label>Message:</label>
+  <br />
+  <textarea name="message[body]"></textarea>
+  <br /><br />
+  <input type="submit">
+</form>
+{% endhighlight %}
+
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/a781476816db1087b968531890e521174d309e35
+
+At this point you should be able to hit @http://localhost:3000/messages/new@ and get the message creation form.
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/03_message_form.png!
+
+h2. 06| Process the request
+
+Users will be posting messages so we will need a @Message@ model representation to handle them.
+
+*Note*: Keeping the simplicity of the example we will store messages in memory (they will live as long as the server is alive, will be destroy after the server stops).
+
+Let's create our models under a @./app/lib/models/@ directory.
+
+@./app/lib/models/message.rb@
+
+{% highlight ruby %}
+class Message
+
+  # Public attributes that the messages will have
+
+  attr_accessor :id, :author, :body
+
+  # In memory messagess storage. They will be 
+  # destroyed if the server stops.
+
+  @@messages = []
+
+  # Keeps track of the latest id that has been
+  # used
+
+  @@latest_id = 0
+
+  # Initialize the Message attributes given a 
+  # hash of :attribute_name => :attribute_value 
+
+  def initialize(params={})
+    params.each do |key, value|
+      self.send("#{key}=", value)
+    end
+  end
+
+  # Sets the message id and adds it to the 
+  # messages storege.
+
+  def save
+    @@latest_id += 1
+    self.id = @@latest_id
+    @@messages << self
+  end
+
+end
+{% endhighlight %}
+
+Now we need to create the *Route*, *Controller* and *Action* to handle the messages creation.
+
+*Routes* are defined within the @routes@ block that lives on @config/application.rb@ file.
+
+@.config/application.rb@
+
+{% highlight ruby %}
+#...
+routes do 
+  default :ApplicationController, :index
+end
+#...
+{% endhighlight %}
+
+Single routes can be defined following this pattern: @method path, controller, action@
+
+On our example we have a @post@ request using the @messages@ path and we will define a @MessagesController@ with a @create@ action in it.
+
+@.config/application.rb@
+
+{% highlight ruby %}
+#...
+routes do 
+  default :ApplicationController, :index
+
+  post 'messages', :MessagesController, :create
+end
+#...
+{% endhighlight %}
+
+Now that the route is defined we will need to create the @MessagesController@.
+
+Skiping the discussion about organization and keeping things simple I will just say that *Controllers* can be define within the @./app/lib/@ directory. Actaully the framework will autoload any file that lives within the @./app/lib/@ directory or any of its children. 
+
+*Actions* can then be defined as @public@ controller methods.
+
+This would be our brand new @MessageController@:
+
+@./app/lib/messages_controller.rb@
+
+{% highlight ruby %}
+class MessagesController
+
+  def create
+  end
+
+end
+{% endhighlight %}
+
+At this point submitting the message form will create a post request that will go throug the @MessagesController@ @create@ action. Here you can interact with your classes and access the request information via the @Pakyow::Helpers@ methods [Available helper methods documentation "(tblank)Here":http://pakyow.com/manual#section_8].
+
+To make it store the message we must make some changes over the controller:
+
+@./app/lib/messages_controller.rb@
+
+{% highlight ruby %}
+class MessagesController
+  
+  include Pakyow::Helpers
+
+  def create
+    Message.new(request.params['message']).save
+  end
+
+end
+{% endhighlight %}
+
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/33fcb3cc7dfa5bc8fdb6f2deaf4507f85ea0c06b
+
+We are succeessfully creating and storing the messages. How can you check that ? ...
+
+h2. 07| Render Stored Information
+
+Let's create a messages listing to render all the stored messages under the @messages@ path. 
+
+Startign with its views we will need a @main.html@ under the @./app/views/messsages/index/@ directory
+
+@./app/views/messages/index/main.html@
+
+{% highlight html %}
+<h1>Recent Messages</h1>
+
+<a href="/messages/new">Post a Message</a>
+
+<div id="message"></div>
+{% endhighlight %}
+
+And a @message.html@ with the message html representation. We may want to show messages on several sections of our application so make it a generic html creating it unde the @./app/views/@ directory.
+
+@./app/views/message.html@
+
+{% highlight html %}
+<p>
+  <strong>
+    <span itemprop="message[author]"></span>
+  </strong> 
+  says:
+  <br />
+  <span itemprop="message[body]"></span>
+</p>
+{% endhighlight %}
+
+The @itemprop@ value is composed by the object class name and the object attribute that should be used to fill the element (@object_class[object_attribute]@). This will be then used at the controller to bound the object instance with the html structure. 
+
+Note that we are just defining the html structure of a single message here. The list of them will be generated from the controller, using the message structure.
+
+Once again we need to create a route for the messages index and an action to load the messages and handle the view.
+
+@./config/application.rb@
+
+{% highlight ruby %}
+#...
+routes do 
+  default :ApplicationController, :index
+
+  get 'messages', :MessagesController, :index
+
+  post 'messages', :MessagesController, :create
+end
+#...
+{% endhighlight %}
+
+@./app/lib/messages_controller.rb@
+
+{% highlight ruby %}
+class MessagesController
+  
+  include Pakyow::Helpers
+
+  def index
+    # Gets the full collection of stored messages
+    messages = Message.all
+    
+    # * Takes the html elemetn with id = "message"
+    view = presenter.view.find('#message')
+
+    # * Creates a copy for each message
+    # * Fills the *author* and *body* spans with 
+    # each message namesake attribute value
+    view.repeat_for(messages)
+  end
+
+  def create
+    Message.new(request.params['message']).save
+
+    # Redirect to the messages index after
+    # the message creation
+    app.redirect_to('messages')
+  end
+
+end
+{% endhighlight %}
+
+There is a @view.repeat_for@. 
+
+Calling @repeat_for@ with a collection as param will copy and bind the target view for every collection member. On this example the @./app/views/message.html@ will be repeated for each message and filled with the message current values. 
+
+We are also using a @Message.all@ method there that we can easily define:
+
+@./app/lib/models/message.rb@
+
+{% highlight ruby %}
+class Message
+#...
+  # Returns the stored collection of messages
+
+  def self.all
+    @@messages
+  end
+#...
+end
+{% endhighlight %}
+
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/9492639f464123c4f9dae170fce675a8b465a4f
+
+@http://localhost:3000/messages@ will now hold the listing of the current messages and a link to the message form.
+
+Try posting a couple of messages and see how they are added to the list.
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/04_messages_listing.png!
+
+h2. 08| Edit Objects
+
+Editing messages will be a two steps process. Users will go to an edit page with a form in there where they will be able to modify the selected message. Submiting that form should update the message and take them back to the messages listing. 
+
+Since every message needs its own edit link a container needs to be defined for them.
+
+*Note*: We will use tables so we dont't get distracted with the CSS.
+
+@.app/views/messages/index/main.html@
+
+{% highlight html %}
+<h1>Recent Messages</h1>
+
+<a href="/messages/new">Post a Message</a>
+
+<table>
+  <div id="message"></div>
+</table>
+{% endhighlight %}
+
+@./app/views/message.html@
+
+{% highlight html %}
+<tr>
+  <td>
+    <span itemprop="message[html_edit_link]"></span>
+  </td>
+  <td>
+    <p>
+      <strong>
+        <span itemprop="message[author]"></span>
+      </strong> 
+      says:
+      <br />
+      <span itemprop="message[body]"></span>
+    </p>
+  </td>
+</tr>
+{% endhighlight %}
+
+There we have a new span that will be filled with the @message.html_edit_link@, method that should be defined:
+
+@./app/lib/model/message.rb@
+
+{% highlight ruby %}
+class Message
+#...
+  # Returns the message edit html link as string.  
+
+  def html_edit_link
+    edit_path = "/messages/edit/#{self.id}"
+
+    <<-EDIT_LINK
+      <a href="#{edit_path}">
+        <img src="/images/edit.png"></img>
+      </a>
+    EDIT_LINK
+  end
+#...
+end
+{% endhighlight %}
+
+This method will return a link to the edit message path (@/messages/edit/:massage_id@) with an image as its content.
+
+Public files, such as images, can be dropped on the @./public@ folder. On our example we will need the following image file:
+
+@./public/images/edit.png@
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/05_edit_icon.png!
+
+We now need to define the message edit route and action:
+
+@./config/application.rb@
+ 
+{% highlight ruby %}
+#...
+routes do
+  default :ApplicationController, :index
+
+  get 'messages',:MessagesController,:index
+
+  post 'messages',:MessagesController,:create
+
+  get 'messages/edit/:id',:MessagesController,:edit
+end
+#...
+{% endhighlight %}
+
+@./app/lib/messages_controller.rb@
+ 
+{% highlight ruby %}
+class MessagesController
+#...
+  def edit
+    message_id = request.params[:id].to_i
+
+    message = Message.find(message_id)
+
+    view = presenter.view.find('form')
+
+    action = "/messages/#{message.id}"
+
+    # Sets the edit message form action attribute
+    view.attributes.action = action
+
+    # Binds the message to the edit form. 
+    # This will fill the edit form fields with the 
+    # current object data.
+    view.bind(message)
+  end
+#...
+end
+{% endhighlight %}
+
+Note that we are using a @Message.find@ method that should be returing the message for the given id (defined below).
+
+Another remarkable call here is the @view.bind@ method. 
+
+Calling @bind@ with an object as param will bound the object attribute values to the target view. On our example we are getting the message form and binding a message instance to it (auto fillng each of its fields).
+
+*Note*: Since @bind@ is not able to match the html elements by their @name@ attribute we will need to add the @itemprop@ attribute to them too.
+
+@./app/views/messages/form.html@
+
+{% highlight html %}
+<form action="/messages" method="post">
+  <label>As:</label>
+  <br />
+  <input type="text" name="message[author]" 
+    itemprop="message[author]">
+  <br /><br />
+  <label>Message:</label>
+  <br />
+  <textarea name="message[body]" 
+    itemprop="message[body]"></textarea>
+  <br /><br />
+  <input type="submit">
+</form>
+{% endhighlight %}
+
+And here we have how our @Message.find@ method looks like:
+
+@./app/lib/models/message.rb@
+
+{% highlight ruby %}
+Class Message
+#...
+  # Given a Message id searches and returns 
+  # the targer instance.
+
+  def self.find(id)
+    @@messages.find { |message| message.id == id }
+  end
+#...
+end
+{% endhighlight %}
+
+You can now try how this works. Create some messages and then navigate to the messages listing page @http://localhost:3000/messages@
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/06_messages_listing_w_edit_links.png!
+
+Clicking any of the edit links should take you to the message edit page @http://localhost:3000/messges/edit/:message_id@
+
+!/images/2011-09-01-the-hitchhikers-guide-to-pakyow/07_message_edit_form.png!
+
+The first step is done. Now we need something to handle the update process on the backend and redirect the user to the listing. 
+
+Time to create our messages @update@ route and  action:
+
+@./config/application.rb@
+ 
+{% highlight ruby %}
+#...
+routes do
+  default :ApplicationController, :index
+
+  get 'messages',:MessagesController,:index
+
+  post 'messages',:MessagesController,:create
+
+  get 'messages/edit/:id',:MessagesController,:edi
+
+  post 'messages/:id', :MessagesController, :update
+end
+#...
+{% endhighlight %}
+
+
+@./app/lib/messages_controller.rb@
+
+{% highlight ruby %}
+class MessagesController
+#...
+  def update
+    message = Message.find(request.params[:id].to_i)
+
+    message.update(request.params['message'])
+     
+    app.redirect_to('/messages')
+  end
+#...
+end
+{% endhighlight %}
+
+And another new @Message@ method, @message.update@, that will update the messages attributes given a @:atrtibute_name => :attribute_value@ hash:
+
+@./app/lib/models/message.rb@
+
+{% highlight ruby %}
+Class Message
+#...
+  # Updates the Message attributes given a
+  # hash of :attribute_name => :attribute_value
+
+  def update(params={})
+    params.each do |key, value|
+      self.send("#{key}=", value)
+    end
+  end
+#...
+end
+{% endhighlight %}
+
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/60bc92f9d0c83cb5448985febda5a5ed5b1360c9
+
+And you are rady to update messages and see them updated on the messages listing page.
+
+h2. Summary
+
+I think that is is enough for a first trip around Pakyow. Starting from here I will be posting a series of articles covering advanced features of the framework, inspecting the bakend and discussing the code organization for different types of projects.
+
+Don't be afraid of leaving your thought or contacting me if you have further questions or critics about the post.
+
+If you have question, problems or want to share your Pakyow experience try to use its communication channels:
+
+ * "(tblank)GitHub":https://github.com/metabahn/pakyow
+ * "(tblank)Mailing List":http://groups.google.com/group/pakyow
+ * "(tblank)IRC Freenode Channel [#pakyow]":http://webchat.freenode.net?channels=pakyow
+ * "(tblank)Twitter":https://twitter.com/#!/pakyow
