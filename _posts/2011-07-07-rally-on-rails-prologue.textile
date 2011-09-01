@@ -1,5 +1,6 @@
 ---
 title: Rally on Rails - Prologue
+disqus_title: Rally on Rails - Prologue 
 layout: post
 tags: rally&nbsp;on&nbsp;rails
 keywords: rally on rails, rallyonrails, rubyoverflow, ruby overflow 

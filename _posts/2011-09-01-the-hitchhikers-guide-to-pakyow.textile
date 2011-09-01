@@ -1,10 +1,11 @@
 ---
-title: The Hitchhiker's Guide to Pakyaw
+title: The Hitchhiker's Guide to Pakyow
+disqus_title: The Hitchhiker\'s Guide to Pakyow
 layout: post
 keywords: pakyow, pakyow tutorial, ruby pakyow, pakyow framework, pakyow ruby web framework
-meta_desc:
+meta_desc: Pakyow guickstart guide coevering some of the main aspects of the framework.
 tags: pakyow
-identifier: the_hitchhikers_guide_to_pakyaw
+identifier: the hitchhikers_guide_to_pakyow
 ---
 
 "(tblank)Pakyow":http://@ attributeakyow.com is a brand new "(tblank)rack":http://rack.rubyforge.org/ based web framework for Ruby.
