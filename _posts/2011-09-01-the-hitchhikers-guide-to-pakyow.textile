@@ -3,7 +3,7 @@ title: The Hitchhiker's Guide to Pakyow
 disqus_title: The Hitchhiker\'s Guide to Pakyow
 layout: post
 keywords: pakyow, pakyow tutorial, ruby pakyow, pakyow framework, pakyow ruby web framework
-meta_desc: Pakyow guickstart guide coevering some of the main aspects of the framework.
+meta_desc: Pakyow guickstart guide covering some of the main aspects of the framework.
 tags: pakyow
 identifier: the hitchhikers_guide_to_pakyow
 ---
