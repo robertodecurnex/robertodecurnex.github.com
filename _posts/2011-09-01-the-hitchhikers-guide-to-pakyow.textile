@@ -450,7 +450,7 @@ Since every message needs its own edit link a container needs to be defined for 
 {% highlight html %}
 <tr>
   <td>
-    <span itemprop="message[html_edit_link]"></span>
+    <span id="edit_link"></span>
   </td>
   <td>
     <p>
@@ -465,35 +465,56 @@ Since every message needs its own edit link a container needs to be defined for 
 </tr>
 {% endhighlight %}
 
-There we have a new span that will be filled with the @message.html_edit_link@, method that should be defined:
+There we have a new span that will be filled with the following  @edit_link@ content view: 
 
-@./app/lib/model/message.rb@
+@./app/views/messages/edit_link.html@
 
-{% highlight ruby %}
-class Message
-#...
-  # Returns the message edit html link as string.  
-
-  def html_edit_link
-    edit_path = "/messages/edit/#{self.id}"
-
-    <<-EDIT_LINK
-      <a href="#{edit_path}">
-        <img src="/images/edit.png"></img>
-      </a>
-    EDIT_LINK
-  end
-#...
-end
+{% highlight html %}
+<a itemprop="message[edit_link]" href="#">
+  <img src="/images/edit.png"></img>
+</a>
 {% endhighlight %}
 
-This method will return a link to the edit message path (@/messages/edit/:massage_id@) with an image as its content.
+There we have our link, whithout a defiened href, and an image as content. 
 
 Public files, such as images, can be dropped on the @./public@ folder. On our example we will need the following image file:
 
 @./public/images/edit.png@
 
 !/images/2011-09-01-the-hitchhikers-guide-to-pakyow/05_edit_icon.png!
+
+Util now we were using the html @itemprop@ attribute to make the framework fill the elements using a given instance method  (@itemprop="object[method]"@ => @object.method@). 
+
+This works greate when displaying object's attributes but doesn't really fit if we need to render information with a custom format sice we may end up with a really dirty class full of useless methods. 
+
+Here is where *Binders* come to the rescue. 
+
+*Binders* are classes that can be bounded to our models and defien all these methods that will interact and return the fromatted object attributs. 
+
+Whenever a *Binder* is defined for an object and this is bound to an html element the framework will try to find the method in the binder first and then in the object class (@itemprop="object[method]"@ => @binder.method || object.method@).
+
+Let's use one of them to generate our edit link href:
+
+@./app/lib/binders/message_binder.rb@
+
+{% highlight ruby %}
+class MessageBinder < Pakyow::Presenter::Binder
+
+  # Target class to be bounded
+  binder_for :Message
+
+  def edit_link
+    {:href => "/messages/edit/#{bindable.id}"}
+  end
+
+end
+{% endhighlight %}
+
+As you can see *Binders* should inherit from @Pakyow::Presenter::Binder@. 
+
+Inside the *Binder* the bounded object instance can be called as @bindable@. 
+
+Note that the @edit_link@ method is returning a hash. The framework will use hashes to modify the html attributes based on its keys. On our example the link @href@ will be replaced with @/messages/edit/:message_id@.
 
 We now need to define the message edit route and action:
 
@@ -648,7 +669,7 @@ Class Message
 end
 {% endhighlight %}
 
-"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/60bc92f9d0c83cb5448985febda5a5ed5b1360c9
+"(tblank)[Commit]":https://github.com/robertodecurnex/the-trend-factory/commit/0b3959d3026419235c94c8e1b90577874c8aad34
 
 And you are rady to update messages and see them updated on the messages listing page.
 
