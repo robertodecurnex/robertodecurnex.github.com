@@ -8,7 +8,7 @@ tags: pakyow
 identifier: the hitchhikers_guide_to_pakyow
 ---
 
-"(tblank)Pakyow":http://@ attributeakyow.com is a brand new "(tblank)rack":http://rack.rubyforge.org/ based web framework for Ruby.
+"(tblank)Pakyow":http://pakyow.com is a brand new "(tblank)rack":http://rack.rubyforge.org/ based web framework for Ruby.
 
 The objective of this post is to build toghether our first Pakyow application, *&quot;The Trend Factory&quot;*. We will move forward step by step inspecting some of the main features of the framework. 
 
