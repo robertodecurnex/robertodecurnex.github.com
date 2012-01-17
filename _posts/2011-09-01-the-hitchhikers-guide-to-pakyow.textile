@@ -36,7 +36,7 @@ app/
     application_controller.rb
   views/
     main.html
-    @ attributeakyow.html 
+    pakyow.html 
 config/
   application.rb
 logs/
@@ -54,7 +54,7 @@ h2. 03| Start the Development Server
 
 notextile. <pre class="coderay">
 cd the-trend-factory
-@ attributeakyow server
+pakyow server
 </pre>
 
 That will start your development server listening on @localhst:3000@.
