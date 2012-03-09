@@ -1,4 +1,4 @@
 source :gemcutter
 
 gem 'jekyll'
-gem 'RedCloth'
+gem 'RedCloth', '4.2.3'

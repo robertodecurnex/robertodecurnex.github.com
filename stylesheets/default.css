@@ -105,7 +105,22 @@ div.section#twitter h4 {
 div.section#twitter h3 {
   font-size: 12px !important;
 }
-div.nav#main h3 {
+div.section#twitter {
+  margin-bottom: 10px;
+}
+div.section#shelfi {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  padding: 1px 2%;
+}
+div.section#shelfi div#shelf {
+  padding: 10px 20px;
+}
+div.section#shelfi div#shelf div#shelfari {
+  margin: 0 auto;
+}
+div.nav#main h3,
+div.section#shelfi h3 {
   background-color: rgba(0,0,0,0.7);
   color: rgba(255,255,255,0.9);
   border-radius: 7px;
