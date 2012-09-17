@@ -93,7 +93,7 @@
 
           <h3>Profile</h3>
           <p>
-            <a href="/roberto_decurnex.pdf" target="_blank" title="Résumé">r&eacute;sum&eacute;</a>
+            <a href="/roberto_decurnex.pdf" target="_blank" title="R&eacute;sum&eacute;">r&eacute;sum&eacute;</a>
           </p>
           <p>
             <a href="http://github.com/robertodecurnex" target="_blank" title="Github">github</a>
@@ -105,6 +105,18 @@
             <a href="http://stackoverflow.com/users/550167/robertodecurnex" target="_blank" title="StackOverflow">stackoverflow</a>
           </p>
 
+          <h3>Recent Posts</h3>
+
+          {% for post in site.posts limit:5 %}
+            <p>
+              {% if post.title.size < 23 %}
+                <a href="{{post.url}}" title="{{post.title}}">{{ post.title }}</a>
+              {% else %} 
+                <a href="{{post.url}}" title="{{post.title}}">{{ post.title | truncate: 23 }}</a>
+              {% endif %}
+            </p>
+          {% endfor %}
+          
           <h3>Projects</h3>
           <p>
             <a href="/rack-jsonp-middleware" target="_blank" title="A Rack JSONP middleware">rack-jsonp-middleware</a>

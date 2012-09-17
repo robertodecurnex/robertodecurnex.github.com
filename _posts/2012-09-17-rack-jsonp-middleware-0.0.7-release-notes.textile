@@ -1,0 +1,53 @@
+---
+title: rack-jsonp-middleware 0.0.7 - Release Notes
+disqus_title: rack-jsonp-middleware 0.0.7 - Release Notes
+layout: post
+keywords: rack-jsonp-middleware, rack-jsonp-middleware 0.0.7, rack jsonp, rack-jsonp-middleware release notes, rack-jsonp-middleware gem, jsonp gem
+meta_desc: rack-jsonp-middleware 0.0.7 release notes.
+tags: rack-jsonp-middleware, release_notes
+identifier: rack-jsonp-middleware-0.0.7_release-notes
+---
+
+Several security changes have been made lately over the "(tblank)gem":https://github.com/robertodecurnex/rack-jsonp-middleware so I think it's time to give you some more detailed information about the project status and create the release notes of every version (as I should have done since the very beginning... Shame on me!).
+
+Before enter in the details I would like to thank the people that found and fix them in the first place.
+
+* Ryan Wilcox ("(tblank)rwilcox":https://github.com/rwilcox)
+* Amiel Martin ("(tblank)amiel":https://github.com/amiel)
+* Michael Grosser ("(tblank)grosser":https://github.com/grosser)
+* Matt Sanford ("(tblank)mzsanford":https://github.com/mzsanford)
+
+h2. 0.0.7 Release Notes
+
+"(tblank)mzsanford":https://github.com/mzsanford has added @callback@ sanitation methods to prevent *XSS attacks*.
+
+Basically we are only allowing @callbacks@ to be valid JS function names and preventing JS code blocks to be used instead. 
+
+The main risk of let the @callback@ be a chunk of JS code is that the user may access/edit our cookies or create a whole page with our signature (eg: phishing forms).
+
+h2. 0.0.6 Release Notes
+
+"(tblank)amiel":https://github.com/amiel has fixed some bugs:
+ # Incorrect @Content-Length@ when sending multibytes characters.
+ # Loosing @Content-Type@ charset when requesting *JSONP*.
+
+*1)* The @Content-Length@ was computed adding 1 byte for each character.
+
+When sending multibyte characters this is not true so we ended up having a smaller @Content-Length@ => loosing some trailing characters.
+
+It was solved by computing the lenght based on the bytesize of each character. 
+
+
+*2)* Since the original @Content-Type@ of the response is @application/json@ we are overwriting it with @application/javascript@. 
+
+Turn out that the @Content-Type@ may hold the type and the encoding, and we were not saving the encoding. 
+
+Now we are just replacing the @application/json@ with @application/javascript@ and leaving the rest of the @Content-Type@ untouched.
+
+h2. How about you?
+
+Are ou having any problem with the "(tblank)gem":https://github.com/robertodecurnex/rack-jsonp-middleware ? 
+
+Is there any feature you would love to be included?
+
+Fork the "(tblank)project":https://github.com/robertodecurnex/rack-jsonp-middleware, create some "(tblank)issues":https://github.com/robertodecurnex/rack-jsonp-middleware/issues, purpose some "(tblank)features":https://github.com/robertodecurnex/rack-jsonp-middleware. Don't be shy, we would love to get your feedback.
