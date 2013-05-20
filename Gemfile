@@ -1,4 +1,4 @@
-source :gemcutter
+source 'https://rubygems.org'
 
 gem 'jekyll'
-gem 'RedCloth', '4.2.3'
+gem 'RedCloth'

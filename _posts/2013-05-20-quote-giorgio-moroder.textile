@@ -1,0 +1,31 @@
+---
+title: Quote - Giorgio  Moroder
+disqus_title: Quote - Giorgio Moroder
+layout: post
+tags: quote, giorgio&nbsp;moroder
+keywords: quote, giorgiomoroder, giorgio moroder 
+meta_desc: Quote by Giorgio Moroder.
+identifier: quote_giorgio_moroder_1
+---
+
+h2. The Quotes and Me
+
+I'm a quotes lover. I still got stunned whenever my mind clicks and a whole new world of thinking gets borned from just 3 or 4 lines of text.
+
+Over the past few years I've been trying to find a way to share the quotes I've found across books, songs or any other media without success. 
+
+*Facebook:* It's facebook... I'm ok with people using it but quotes are meant to live forever and FB just cares about tranding last minute posts.
+
+*Twitter:* Most of the quotes are larger than 140 charactes.
+
+*Google+:* "If a post falls in Google+ does it make a sound?". It don't, there's no one around to hear it.
+
+So let's try this. It have worked for "(tblank)Signal vs. Noise":http://37signals.com/svn/ for a long time and I have felt confortable reading their quotes from there. 
+
+h2. Quote
+
+p(quote). "Once you free your mind about a concept of harmony and music being correct, you can do whatever you want. So nobody told me what to do, and there was no preconception of what to do."
+_
+_"(tblank)Giorgio Moroder":http://en.wikipedia.org/wiki/Giorgio_Moroder, record producer, songwirter and performer, via "(tblank)Giorgio by Moroder":http://grooveshark.com/#!/s/Giorgio+By+Moroder+feat+Giorgio+Moroder/59awYd?src=5 (Daft Punk song)._
+
+

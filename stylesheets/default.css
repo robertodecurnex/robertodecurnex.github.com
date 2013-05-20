@@ -5,11 +5,10 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;;
   min-width: 1000px;
-  margin: 0 auto;
 }
 div#wrapper {
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
 }
 div#rss-image-wrapper, 
 div#emailme-image-wrapper,
@@ -33,7 +32,7 @@ div.header#main, div.footer#main {
 div.header#main {
   margin-bottom: 10px;
 }
-iv.header#main h1 {
+div.header#main h1 {
   font-size: 29px;
   margin: 10px 0;
   font-weight: normal;
@@ -72,7 +71,7 @@ div.footer#main {
   text-align: right;
 }
 div.section#content, div.nav#main {
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.8);
 }
 div.section#content {
   float: left;
@@ -160,12 +159,12 @@ div.article.post a {
   text-decoration: none;
 }
 div.article.post h2 {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   color: rgba(180, 0, 0, 0.9);
   padding: 6px;
   border-radius: 7px;
   font-size: 17px;
-  margin: 0 -6px 0 -39px;
+  margin: 0 -6px 0 -47px;
 }
 div.article.post div.header {
   background-color: rgba(0, 0, 0, 0.7);
@@ -217,12 +216,16 @@ span.dislike {
 .clearfix {
   clear: both;
 }
-pre {
+pre,
+div.article.post p.quote {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   border-radius: 7px;
   width: 102%;
   padding: 6px 0 6px 20px;
+}
+div.article.post p.quote a {
+  color: rgba(255, 131, 0, 0.9) !important;
 }
 #disqus_thread {
   background-color: rgba(0, 0, 0, 0.6);
