@@ -21,9 +21,6 @@ div#rss-image-wrapper {
 img#rss-image, img#emailme-image, img#resume-image {
   width: 100px;
 }
-div.header#main, div.footer#main, div.section#content,div.nav#main {
-  border-radius: 8px;
-}
 div.header#main, div.footer#main {
   background-color: rgba(0,0,0,0.7);
   padding: 8px;
@@ -75,8 +72,8 @@ div.section#content, div.nav#main {
 }
 div.section#content {
   float: left;
-  width: 60%;
-  margin-right: 5%;
+  width: 65%;
+  margin-right: 1%;
   padding: 15px 2%;
 } 
 div.nav#main {
@@ -96,7 +93,7 @@ div.nav#main table#about-me td.right {
   text-align: left;
 }
 div.section#side-panel {
-  width: 29%;
+  width: 30%;
 }
 div.section#twitter h4 {
   font-size: 15px !important;
@@ -109,7 +106,6 @@ div.section#twitter {
 }
 div.section#shelfi {
   background-color: rgba(255,255,255,0.6);
-  border-radius: 5px;
   padding: 1px 2%;
 }
 div.section#shelfi div#shelf {
@@ -122,12 +118,10 @@ div.nav#main h3,
 div.section#shelfi h3 {
   background-color: rgba(0,0,0,0.7);
   color: rgba(255,255,255,0.9);
-  border-radius: 7px;
   padding: 5px;
   margin: 3px 0;
   font-weight: normal;
   text-align: right;
-  width: 105%;
 }
 div.nav#main p {
     margin: 5px 0 5px 20px;
@@ -141,7 +135,6 @@ div.nav#main a:hover {
   text-decoration: underline;
 }
 div.nav#main img#me {
-  border-radius: 8px;
   border: 2px solid rgba(0,0,0,0.7);
 }
 div.section#side-panel {
@@ -162,18 +155,13 @@ div.article.post h2 {
   background-color: rgba(255, 255, 255, 0.8);
   color: rgba(180, 0, 0, 0.9);
   padding: 6px;
-  border-radius: 7px;
   font-size: 17px;
-  margin: 0 -6px 0 -47px;
 }
 div.article.post div.header {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 116%;
   padding: 10px 10px 10px 0;
   color: rgba(255, 255, 255, 0.9);
-  border-radius: 7px;
   margin-bottom: 5px;
-  margin-left: -9%;
 }
 div.article.post div.header h2 {
   font-size: 22px;
@@ -182,7 +170,6 @@ div.article.post div.header h2 {
   margin: 3px 0;
   background: none;
   padding: 0;
-  border-radius: 0;
 }
 div.article.post div.header h2 a {
   text-decoration: none;
@@ -203,10 +190,6 @@ div.article.post code.ruby,
 div.article.post code.html {
   background-color: transparent;
 }
-div.article.post img {
-  max-width: 108%;
-  border-radius: 12px;
-}
 span.like {
   color: rgba(0,140,0,0.9);
 }
@@ -220,8 +203,6 @@ pre,
 div.article.post p.quote {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  border-radius: 7px;
-  width: 102%;
   padding: 6px 0 6px 20px;
 }
 div.article.post p.quote a {
@@ -230,7 +211,6 @@ div.article.post p.quote a {
 #disqus_thread {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 12px;
-  border-radius: 7px;
   color: rgba(255,255,255,0.9);
 }
 #disqus_thread a {
@@ -243,4 +223,7 @@ div.article.post p.quote a {
 a.dsq-brlink {
   color: rgba(180, 0, 0, 0.9);
   text-decoration: none;
+}
+div.twtr-doc {
+  border-radius: 0 !important;
 }
