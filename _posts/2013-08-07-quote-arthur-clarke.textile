@@ -1,0 +1,17 @@
+---
+title: Quote - Arthur C. Clarke
+disqus_title: Quote - Arthur C. Clarke
+layout: post
+tags: quote, arthur&nbsp;c.&nbsp;clarke
+keywords: quote, arthurclarke, arthurcclarke, arthur c clarke, arthur clarke
+meta_desc: Quote by Arthur C. Clarke.
+identifier: quote_arthur_clarke_1
+---
+
+h2. Quote
+
+p(quote). "Two possibilities exist: either we are alone in the Universe or we are not. Both are equally terrifying."
+_
+_"(tblank)Arthur C. Clarke":http://en.wikipedia.org/wiki/Arthur_C._Clarke, sience fiction writer, as quoted in "Vision: How Science Will Revolutionize the Twenty-First Century"._
+
+
