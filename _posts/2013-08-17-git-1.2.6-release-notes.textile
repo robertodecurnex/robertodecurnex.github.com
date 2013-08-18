@@ -1,0 +1,84 @@
+---
+title: git 1.2.6 - Release Notes
+disqus_title: git 1.2.6 - Release Notes
+layout: post
+keywords: git, ruby-git, git 1.2.6, ruby-git 1.2.6, git release notes, git gem, ruby-git gem
+meta_desc: git 1.2.6 release notes.
+tags: git, release_notes
+identifier: git-1.2.6_release-notes
+---
+
+h2. Overview
+
+Adding support to Ruby 1.9.x/2.0, JRuby 1.8/1.9 and Rubinius.  
+Supporting more commands and options.
+
+h2. 1.2.6 Release Notes
+
+  * Ruby 1.9.X/2.0 fully supported
+  * JRuby 1.8/1.9 support
+  * Rubinius support
+  * Git.clone options
+    ** --recursive
+    ** --config
+  * Git.log methods
+    ** []
+    ** last 
+  * Git.add_remote options
+    ** -f
+    ** -t
+  * Git.add options
+    ** --fore
+  * Git.init options
+    ** --bare
+  * Git.commit options 
+    ** --all
+    ** --amend
+  * Added Git.remote_remote, Git.revert and Git.clean 
+  * Added Bundler to the formula
+  * Travis configuration 
+  * Licence included with the gem
+
+h2. Contributors
+
+  Thank you so much for all your contributions. 
+
+  * "(tblank)agius":https://github.com/agius
+  * "(tblank)AlekSi":https://github.com/AlekSi 
+  * "(tblank)alexspeller":https://github.com/alexspeller
+  * "(tblank)anapsix":https://github.com/anapsix
+  * "(tblank)bcardarella":https://github.com/bcardarella
+  * "(tblank)cczona":https://github.com/cczona
+  * "(tblank)chadrosen":https://github.com/chadrosen
+  * "(tblank)djdeath":https://github.com/djdeath
+  * "(tblank)fasttracktool-dev":https://github.com/fasttracktool-dev
+  * "(tblank)gabriel-cardoso":https://github.com/gabriel-cardoso
+  * "(tblank)geoffdavis":https://github.com/geoffdavis
+  * "(tblank)hyfather":https://github.com/hyfather
+  * "(tblank)ivanvc":https://github.com/ivanvc
+  * "(tblank)jbussdieker":https://github.com/jbussdieker
+  * "(tblank)jenshz":https://github.com/jenshz
+  * "(tblank)joemoore":https://github.com/joemoore
+  * "(tblank)jordimassaguerpla":https://github.com/jordimassaguerpla
+  * "(tblank)kaelin":https://github.com/kaelin
+  * "(tblank)kkrol89":https://github.com/kkrol89
+  * "(tblank)marcomorain":https://github.com/marcomorain
+  * "(tblank)mikemallete":https://github.com/mikemallete 
+  * "(tblank)mohitesethi":https://github.com/mohitsethi
+  * "(tblank)mrVanDalo":https://github.com/mrVanDalo
+  * "(tblank)petedmarsh":https://github.com/petedmarsh
+  * "(tblank)schneems":https://github.com/schneems
+  * "(tblank)snyff":https://github.com/snyff
+  * "(tblank)tadman":https://github.com/tadman
+  * "(tblank)teodor-pripoae":https://github.com/teodor-pripoae
+  * "(tblank)thomasbiddle":https://github.com/thomasbiddle
+  * "(tblank)tit":https://github.com/tit
+  * "(tblank)utgarda":https://github.com/utgarda
+
+
+
+Are you having any problem with the "(tblank)gem":https://github.com/schacon/ruby-git ? 
+
+Is there any feature you would love to be included?
+
+Fork the "(tblank)project":https://github.com/schacon/ruby-git, create some "(tblank)issues":https://github.com/schacon/ruby-git/issues, purpose some "(tblank)features":https://github.com/schacon/ruby-git/issues. Don't be shy, we would love to get your feedback.
