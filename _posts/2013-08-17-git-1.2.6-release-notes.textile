@@ -28,7 +28,7 @@ h2. 1.2.6 Release Notes
     ** -f
     ** -t
   * Git.add options
-    ** --fore
+    ** --force
   * Git.init options
     ** --bare
   * Git.commit options 
