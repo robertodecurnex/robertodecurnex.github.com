@@ -91,7 +91,7 @@
               <td class='center'><strong>&brvbar;</strong></td>
               <td class='right'>GIT <span class='like'>&#10003;</span></td> 
           </table>
-
+          <br />
           <h3>Profile</h3>
           <p>
             <a href="/roberto_decurnex.pdf" target="_blank" title="R&eacute;sum&eacute;">r&eacute;sum&eacute;</a>
@@ -108,19 +108,21 @@
           <p>
             <a href="https://plus.google.com/100034749316009753984" target="_blank" title="Google+" rel="me">google+</a>
           </p>
-
+          <br />
+          <br />
           <h3>Recent Posts</h3>
 
           {% for post in site.posts limit:5 %}
             <p>
-              {% if post.title.size < 23 %}
+              {% if post.title.size < 27 %}
                 <a href="{{post.url}}" title="{{post.title}}">{{ post.title }}</a>
               {% else %} 
-                <a href="{{post.url}}" title="{{post.title}}">{{ post.title | truncate: 23 }}</a>
+                <a href="{{post.url}}" title="{{post.title}}">{{ post.title | truncate: 27 }}</a>
               {% endif %}
             </p>
           {% endfor %}
-          
+          <br />
+          <br />
           <h3>Projects</h3>
           <p>
             <a href="/rack-jsonp-middleware" target="_blank" title="A Rack JSONP middleware">rack-jsonp-middleware</a>
@@ -144,15 +146,38 @@
             <a href="/vigenere" target="_blank" title="Simple Vigenère Cipher ruby implementation">vigenere</a>
           </p>
  
-          <div id="rss-image-wrapper">
+          <div id="rss-image-wrapper" style="display:none;">
             <a href="/atom.xml" target="_blank" ><img id="rss-image" src="/images/rss.png"></img></a>
           </div>
-          <div id="emailme-image-wrapper">
+          <div id="emailme-image-wrapper" style="display:none;">
               <a href="mailto:decurnex.roberto@gmail.com"><img id="emailme-image" src="/images/emailme.png"></img></a>
           </div>
         </div>
       
         <div class="section" id="twitter">
+          <a class="twitter-timeline" href="https://twitter.com/robertodecurnex"
+            data-theme="dark"
+            data-link-color="rgba(255, 131, 0, 0.9)"
+            data-tweet-limit="4"
+            data-widget-id="373106241863569408"
+
+            height:"300"
+          >
+            Tweets by @robertodecurnex
+          </a>
+          <script>
+            !function(d,s,id) {
+              var js, fjs=d.getElementsByTagName(s)[0], p=/^http:/.test(d.location) ? 'http' : 'https'; 
+              
+              if(!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + "://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js,fjs);
+              }
+            }(document,"script","twitter-wjs");
+          </script>
+
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script>
             new TWTR.Widget({

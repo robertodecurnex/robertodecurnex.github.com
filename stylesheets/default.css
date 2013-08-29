@@ -5,10 +5,15 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;;
   min-width: 1000px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+}
+audio {
+  margin-left: 20px;
 }
 div#wrapper {
   margin: 0 auto;
-  width: 70%;
+  width: 72%;
 }
 div#rss-image-wrapper, 
 div#emailme-image-wrapper,
@@ -22,9 +27,11 @@ img#rss-image, img#emailme-image, img#resume-image {
   width: 100px;
 }
 div.header#main, div.footer#main {
-  background-color: rgba(0,0,0,0.7);
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
   padding: 8px;
-  color: rgba(255,255,255,0.9);
+  color: #bbb;
 }
 div.header#main {
   margin-bottom: 10px;
@@ -55,8 +62,9 @@ div.footer#main {
 .footer .author,
 .footer .date,
 .footer .tags {
-  width: 33.3%;
+  width: 33%;
   float: left;
+  color: #bbb;
 }
 .footer .author {
   text-align: left;
@@ -68,32 +76,35 @@ div.footer#main {
   text-align: right;
 }
 div.section#content, div.nav#main {
-  background-color: rgba(255,255,255,0.8);
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
 }
 div.section#content {
   float: left;
-  width: 65%;
+  width: 67%;
   margin-right: 1%;
-  padding: 15px 2%;
+  padding: 15px 0;
 } 
 div.nav#main {
  margin-bottom: 10px;
- padding: 1px 2%;
+ padding: 10px 0;
 }
 div.nav#main table#about-me {
-  margin: 0 auto;
+  color: #bbb;
+  margin-left: 20px;
 }
 div.nav#main table#about-me td.left {
-  text-align: right;
+  text-align: left;
 }
 div.nav#main table#about-me td.center {
   text-align: center;
 }
 div.nav#main table#about-me td.right {
-  text-align: left;
+  text-align: right;
 }
 div.section#side-panel {
-  width: 30%;
+  width: 27.7%;
 }
 div.section#twitter h4 {
   font-size: 15px !important;
@@ -105,8 +116,10 @@ div.section#twitter {
   margin-bottom: 10px;
 }
 div.section#shelfi {
-  background-color: rgba(255,255,255,0.6);
-  padding: 1px 2%;
+  background-color: #333;
+  border: 1px solid rgb(68, 68, 68);
+  border-radius: 5px;
+  padding: 1px;
 }
 div.section#shelfi div#shelf {
   padding: 10px 20px;
@@ -116,49 +129,52 @@ div.section#shelfi div#shelf div#shelfari {
 }
 div.nav#main h3,
 div.section#shelfi h3 {
-  background-color: rgba(0,0,0,0.7);
-  color: rgba(255,255,255,0.9);
-  padding: 5px;
+  color: #cfcfcf;
+  padding: 8px;
   margin: 3px 0;
+  border-bottom: 1px solid rgb(68, 68, 68);
   font-weight: normal;
-  text-align: right;
+  text-align: left;
 }
 div.nav#main p {
     margin: 5px 0 5px 20px;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgb(207, 207, 207);
 }
 div.nav#main a {
     text-decoration: none;
-    color: rgba(0,0,0,0.9)
+    color: #bbb;
 }
 div.nav#main a:hover {
   text-decoration: underline;
 }
 div.nav#main img#me {
-  border: 2px solid rgba(0,0,0,0.7);
+  border: 1px solid #444;
+  border-radius: 5px;
 }
 div.section#side-panel {
   float: left;
 }
 div.article.post {
   margin: 0 0 10px;
-  color: rgba(0, 0, 0, 0.9);
+  color: #cfcfcf;
 }
 div.article.post blockquote {
   margin-right: 0;
 }
 div.article.post a {
-  color: rgba(180, 0, 0, 0.9);
+  color: rgb(224, 125, 38);
   text-decoration: none;
 }
+div.article.post p {
+  margin-left: 20px;
+}
 div.article.post h2 {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: rgba(180, 0, 0, 0.9);
-  padding: 6px;
+  color: rgb(224, 125, 38);
   font-size: 17px;
+  border-bottom: 1px solid #444;
+  padding-left: 8px;
 }
 div.article.post div.header {
-  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 10px 10px 0;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 5px;
@@ -167,24 +183,28 @@ div.article.post div.header h2 {
   font-size: 22px;
   font-weight: normal;
   text-align: center;
-  margin: 3px 0;
-  background: none;
+  margin: 3px 0 3px 5px;
   padding: 0;
+  border: none;
+  background-color: none;
 }
 div.article.post div.header h2 a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
 }
 div.article.post div.footer {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.9);
   padding: 4px 7px;
   text-align: right;
-  border-top: 1px dotted rgba(0, 0, 0, 0.7);
+  border-top: 1px dotted #444;
 }
 div.article.post code {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.64);
+  padding: 0 3px;
+  border: 1px solid #444;
+  border-radius: 5px;
 }
 div.article.post code.ruby,
 div.article.post code.html {
@@ -203,7 +223,10 @@ pre,
 div.article.post p.quote {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 6px 0 6px 20px;
+  padding: 6px 20px;
+  margin: 0 20px;
+  border: 1px solid #444;
+  border-radius: 5px;
 }
 div.article.post p.quote a {
   color: rgba(255, 131, 0, 0.9) !important;
