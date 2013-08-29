@@ -1,0 +1,28 @@
+---
+title: Music for the nerdy masses - Kill Dash Nine by Monzy
+disqus_title: Music for the nerdy masses - Kill Dash Nine by Mozy
+layout: post
+keywords: music, kill dash nine, monzy, geek music, nerdy music, nerd music, song, nerdy song, nerd song, geek song
+meta_desc: Another nerdy music video (Kill Dash Nine by Monzy).
+tags: nerdy_music
+identifier: music-for-the-nerdy-masses-1
+---
+
+h2. The original video
+
+This is on of those songs that every nerd *MUST* have listened to at least once.
+
+"[...]Already tried a SIGQUIT, so now it's KILL DASH 9[...]"
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/Fow7iUaKrq4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+You can also get the studio version + lyrics "(tblank)here":http://www.monzy.com/intro/killdashnine_lyrics.html
+
+h2. Extras (Studio Version)
+
+<audio controls>
+    <source src="http://graphics.stanford.edu/~monzy/KillDashNine.mp3" type="audio/mpeg"></source>
+    "It's sad, so sad, it's a sad, sad situation ..."
+    Yes, it was Ray Charls, in 1976, speaking about your browser, it does not support the audio tags :(
+</audio>
+
