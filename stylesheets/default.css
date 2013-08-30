@@ -6,6 +6,7 @@ body {
   min-width: 1000px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
+  text-shadow: -1px 1px black;
 }
 audio {
   margin-left: 20px;
