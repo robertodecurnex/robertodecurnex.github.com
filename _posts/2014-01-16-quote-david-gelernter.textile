@@ -1,0 +1,17 @@
+---
+title: Quote - David Gelernter
+disqus_title: Quote - David Gelernter
+layout: post
+tags: quote, david&nbsp;gelernter
+keywords: quote, davidgelernter, david gelernter
+meta_desc: Quote by David Gelernter.
+identifier: quote_david_gelernter_1
+---
+
+h2. Quote
+
+p(quote). "Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defence against complexity."
+_
+_"(tblank)David Gelernter":http://en.wikipedia.org/wiki/David_Gelernter, artist, writer, and professor of computer science at Yale University, as written in "Machine Beauty: Elegance And The Heart Of Technology"._
+
+
