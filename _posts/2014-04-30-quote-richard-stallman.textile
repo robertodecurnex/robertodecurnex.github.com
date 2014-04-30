@@ -1,0 +1,17 @@
+---
+title: Quote - Richard Stallman
+disqus_title: Quote - Richard Stallman
+layout: post
+tags: quote, richard&nbsp;stallman
+keywords: quote, richardstallman, richard stallman
+meta_desc: Quote by Richard Stallman.
+identifier: quote_richard_stallman_1
+---
+
+h2. Quote
+
+p(quote). "It's stupidity. It's worse than stupidity: it's a marketing hype campaign."
+_
+_"(tblank)Richard Stallman":http://stallman.org/#serious, software developer, software freedom activist, president of the free software foundation, speaking about Cloud Computing, "(tblank)interview":http://www.theguardian.com/technology/2008/sep/29/cloud.computing.richard.stallman by The Guardian._
+
+
