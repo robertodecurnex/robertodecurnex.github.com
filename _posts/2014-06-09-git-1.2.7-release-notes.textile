@@ -1,0 +1,43 @@
+---
+title: git 1.2.7 - Release Notes
+disqus_title: git 1.2.7 - Release Notes
+layout: post
+keywords: git, ruby-git, git 1.2.7, ruby-git 1.2.7, git release notes, git gem, ruby-git gem
+meta_desc: git 1.2.7 release notes.
+tags: git, release_notes
+identifier: git-1.2.7_release-notes
+---
+
+h2. 1.2.7 Release Notes
+
+  * Fixing mesages encoding
+  * Fixing -f flag in git push
+  * Fixing log parser for multiline messages
+  * Supporting object references on Git.add_tag
+  * Including dotfiles on Git.status
+  * Git.fetch options
+    ** --tags
+  * Git.clean options
+    ** -x
+  * Git.add_tag options
+    ** -a
+    ** -m
+    ** -s
+  * Added Git.delete_tag
+
+h2. Contributors
+
+  Thank you so much for all your contributions. 
+
+  * "(tblank)bsedat":https://github.com/bsedat
+  * "(tblank)cwalsh":https://github.com/cwalsh
+  * "(tblank)davefp":https://github.com/davefp
+  * "(tblank)guyhughes":https://github.com/guyhughes
+  * "(tblank)ohtake":https://github.com/ohtake
+  * "(tblank)swimminschrage":https://github.com/swimminschrage
+
+Are you having any problem with the "(tblank)gem":https://github.com/schacon/ruby-git ? 
+
+Is there any feature you would love to be included?
+
+Fork the "(tblank)project":https://github.com/schacon/ruby-git, create some "(tblank)issues":https://github.com/schacon/ruby-git/issues, purpose some "(tblank)features":https://github.com/schacon/ruby-git/issues. Don't be shy, we would love to get your feedback.
