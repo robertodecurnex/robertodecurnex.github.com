@@ -20,7 +20,7 @@ h2. What is it?
 
 **REISUB** can be described as a gentle reboot process. It's name represent the keys involved and the order in which they must be pressed. 
 
-There's a rule to remember this letters, _**"Raising Skinny Elephants Is Uterly Boring"**_. Personally, I find easier to remember just **REISUB** as a weird word.
+There's a rule to remember these letters, _**"Raising Skinny Elephants Is Utterly Boring"**_. Personally, I find easier to remember just **REISUB** as a weird word.
 
 h2. How can it be executed?
 
