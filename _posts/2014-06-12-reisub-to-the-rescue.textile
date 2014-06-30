@@ -1,0 +1,74 @@
+---
+title: `REISUB` to the resuce
+disqus_title: `REISUB` to the rescue
+layout: post
+keywords: linux, reisub, rseiub, ubuntu, restart linux, restart ubuntu, linux hard shutdown, ubuntu hard shutdown
+meta_desc: REISUB, the best way to restart your non-respoinsive linux.
+tags: linux, ubuntu, reisub
+identifier: reisub_to_the_rescue
+---
+
+h2. **REISUB** to the rescue
+
+Since Ubunut 12.04 most of us have been having problems with our machines, they got completely tilt randomly, all the time for some of us, once in a while for others. Everything was so fucked up that not even <code>Ctrl</code> + <code>Alt</code> + <code>F1</code> (or the FX you like the most) was working, nor the power button associated action (reboot or shutdown). 
+
+Common solution: Hold your power button for ~7 seconds, look how your machine power goes off and how everything got violently halt. "Oh no, poor processes! Oh god, protect my hard drives! The buffer... My services... What a mess!"
+
+Do not panic, **REISUB** came to the rescue. 
+
+h2. What is it?
+
+**REISUB** can be described as a gentle reboot process. It's name represent the keys involved and the order in which they must be pressed. 
+
+There's a rule to remember this letters, _**"Raising Skinny Elephants Is Uterly Boring"**_. Personally, I find easier to remember just **REISUB** as a weird word.
+
+h2. How can it be executed?
+
+Press and hold <code>Alt</code> + <code>SysRq</code> (<code>SysRq</code> -> <code>PrintScrn</code> in most of the keyboards) and type <code>R</code><code>E</code><code>I</code><code>S</code><code>U</code><code>B</code>.
+
+<code>R</code><code>E</code><code>I</code><code>S</code><code>U</code><code>B</code> must be typed slowly to let every signal do its work before start the next one. If you type them quickly the reboot will be done but it won't be so gentle with your processes and hard drives.
+
+h2. How it works?
+
+<code>Alt</code>+<code>SysRq</code> will open a communication channel with the kernel that let you send low-level commands regardless of the machine state.
+
+<code>R</code> Switch the keyboard from raw mode to XLATE mode.
+
+<code>E</code> Send the SIGTERM signal to all processes except PID 1. 
+
+<code>I</code> Send the SIGKILL signal to all processes except PID 1.
+
+<code>S</code> Sync all mounted filesystems.
+
+<code>U</code> Remount all mounted filesystems in read-only mode.
+
+<code>B</code> Reboot the system, without unmounting or syncing filesystems.
+
+See why you should do that slowly? Actually you can send some _combos_:
+
+<code>RE</code>, hold yout fingers a couple of seconds, <code>IS</code>, hold again, <code>U</code>, hold, <code>B</code>.
+
+h2. W@t?
+
+<code>R</code> is _"opening the gate"_ for the rest of the inputs, you can send the next signal right away.
+
+<code>E</code> sends the SIGTERM, which is catched by every process and make, most of them, end their routins cleanly (close communication channels, write buffers, what ever...).
+
+<code>I</code> sends the SIGKILL, making all the processes halt violently, leaving some of the clean up routins unfinished. 
+If you give enough time between <code>E</code> and <code>I</code> none (or just a few) processes will end dirty.
+
+<code>S</code> will sync your filesystems, writing everything that may be taking a nap in any of the buffers.
+
+<code>U</code> will remount the filesystems as read-only, preventing data loss (information from gettgin lost in the buffers, trying to get into the filesystem) at the moment that the reboot takes place.
+Again, giving enough time between <code>S</code> and <code>U</code> will let the Sync process end (every buffer get flushed) before the remount process starts.
+
+<code>B</code> **REBOOT**, regardless of the system status.
+If you don't give <code>U</code> the time it needs data may get lost in the buffers on their way to a read/write filesystems.
+
+h2. Notes
+
+  * You can replace <code>B</code> with <code>O</code> if your need to shutdown the system instead of reboot it.
+  * The complete list of available commands can be found "(tblank)here":http://en.wikipedia.org/wiki/Magic_SysRq_key#Commands
+
+
+Anything not working for you? Something is not very clear? Comment below &darr;!
