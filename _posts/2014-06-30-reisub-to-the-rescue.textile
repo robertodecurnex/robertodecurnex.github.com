@@ -1,6 +1,6 @@
 ---
-title: `REISUB` to the resuce
-disqus_title: `REISUB` to the rescue
+title: REISUB to the resuce
+disqus_title: REISUB to the rescue
 layout: post
 keywords: linux, reisub, rseiub, ubuntu, restart linux, restart ubuntu, linux hard shutdown, ubuntu hard shutdown
 meta_desc: REISUB, the best way to restart your non-respoinsive linux.
