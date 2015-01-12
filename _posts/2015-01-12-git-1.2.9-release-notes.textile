@@ -1,0 +1,82 @@
+---
+title: git 1.2.9 - Release Notes
+disqus_title: git 1.2.9 - Release Notes
+layout: post
+keywords: git, ruby-git, git 1.2.9, ruby-git 1.2.9, git release notes, git gem, ruby-git gem
+meta_desc: git 1.2.9 release notes.
+tags: git, release_notes
+identifier: git-1.2.9_release-notes
+---
+
+h2. 1.2.9 Release Notes
+
+  * Adding Git.configure (to configure the git env)
+     <code>Git.configure do |config|</code>
+     <code>__# If you want to use a custom git binary</code>
+     <code>__config.binary_path = '/git/bin/path'</code>
+     <code>_________________________________________</code>
+     <code>__# If you need to use a custom SSH script</code>
+     <code>__config.git_ssh = '/path/to/ssh/script'</code>
+     <code>end</code>
+
+  * Adding <code>Git.ls_remote</code> 
+    ** <code>Git.ls_remote(repo_path_or_url) # Defaulting to '.'</code>
+
+  * Adding <code>Git.describe</code>
+    ** <code>repo.describe(objectish, opts)</code>
+
+  * Adding <code>Git.show</code>
+    ** <code>repo.show(objectish, path) # Defaulting to HEAD as Git does</code>
+
+  * Fixing <code>Git::Diff</code> to support default references
+    ** <code>from</code> and <code>to</code> commitish, are optional. They were both required.
+  * Fixing <code>Git::Diff</code> to support diff over git .patch files
+    ** <code>.patch</code> files include <code>git diff</code> formatted text. The gem was ignoring identation and getting confused with them.
+
+  * Fixing <code>Git.checkout</code> when using <code>:new_branch</code> opt
+
+  * Fixing <code>Git::Object::Commit</code> to preserve its sha after fetching metadata
+    ** Fething metadata for a given commit was, sometimes, overwriting the <code>sha</code> with its commitish name
+
+  * Fixing <code>Git.is_remote_branch?</code> to actually check against remote branches
+
+  * Improvements over how <code>ENV</code> variables are modified
+    ** Commands were leaving the <code>ENV</code> modified affecting the code running over the same proc. New we set and reset those values right before/after running the command. A Mutex has also been added to prevent concurrent commands to get affected
+
+  * Improving thrade safety (using <code>--git-dir</code> and <code>--work-tree</code> git opts)
+    ** Instead of move the current directory we are new using the Git opts. 
+
+  * Improving <code>Git::Object::Tag</code>. Adding annotated?, tagger and message
+    ** We were trating all tags the same. Now annotated tags will responde return a <code>message</code> and a <code>tagger</code> (a <code>Git::Author</code> instance). Normal tags will just return nil.
+
+  * Supporting a submodule path as a valid repo
+    ** It was imposible to Git.open a submodule path (mostrly because the .git folder is not present on those cases). We are now detecting those scenarios and setting the path and index based on the submodule .git file content.
+
+  * <code>Git.checkout</code>
+    ** -f
+    ** -b
+
+  * <code>Git.clone</code>
+    ** --branch 
+
+  * <code>Git.fetch</code>
+    ** --prune 
+
+h2. Contributors
+
+  Thank you so much for all your contributions. 
+
+  * "(tblank)adamhooper":https://github.com/adamhooper
+  * "(tblank)apachelogger":https://github.com/apachelogger
+  * "(tblank)francisluong":https://github.com/francisluong
+  * "(tblank)kwstannard":https://github.com/kwstannard
+  * "(tblank)mwrock":https://github.com/mwrock
+  * "(tblank)notdavelane":https://github.com/NotDaveLane
+  * "(tblank)othatbrian":https://github.com/othatbrian
+  * "(tblank)thomasbiddle":https://github.com/thomasbiddle
+
+Are you having any problem with the "(tblank)gem":https://github.com/schacon/ruby-git ? 
+
+Is there any feature you would love to be included?
+
+Fork the "(tblank)project":https://github.com/schacon/ruby-git, create some "(tblank)issues":https://github.com/schacon/ruby-git/issues, purpose some "(tblank)features":https://github.com/schacon/ruby-git/issues. Don't be shy, we would love to get your feedback.
