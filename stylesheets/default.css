@@ -207,6 +207,11 @@ div.article.post code {
   border: 1px solid #444;
   border-radius: 5px;
 }
+
+div.article.post pre code {
+  background-color: transparent;
+  border: none;
+}
 div.article.post code.ruby,
 div.article.post code.html {
   background-color: transparent;

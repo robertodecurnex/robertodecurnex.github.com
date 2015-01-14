@@ -13,13 +13,13 @@ h2. 1.2.9 Release Notes
   * Adding Git.configure (to configure the git env)
 
 {% highlight ruby %}
-     Git.configure do |config|
-       # If you want to use a custom git binary
-       config.binary_path = '/git/bin/path'
+Git.configure do |config|
+  # If you want to use a custom git binary
+  config.binary_path = '/git/bin/path'
 
-       # If you need to use a custom SSH script
-       config.git_ssh = '/path/to/ssh/script'
-     end
+   # If you need to use a custom SSH script
+   config.git_ssh = '/path/to/ssh/script'
+end
 {% endhighlight %}
 
   * Adding <code>Git.ls_remote</code> 
