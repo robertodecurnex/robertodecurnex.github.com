@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
 gem 'RedCloth'
+gem 'heroku'
+gem 'jekyll'
+gem 'rack-jekyll'
